@@ -1,0 +1,32 @@
+RELATÓRIO DE CÓDIGOS - SISTEMA DE VOTAÇÃO
+
+Aluno: Jorge Bruno Costa Alves - 509718
+
+Código do Servidor:
+O código do servidor é responsável por gerenciar a votação, receber conexões de clientes e processar as interações com votantes e administradores. Ele implementa as seguintes funcionalidades:
+
+1. Carregamento de dados iniciais a partir de um arquivo JSON, incluindo informações sobre candidatos, eleitores e um limite de tempo para a votação.
+2. Verificação se um CPF pertence a um administrador.
+3. Adição de um novo candidato à lista de candidatos e atualização do arquivo JSON.
+4. Remoção de um candidato com base em seu índice na lista de candidatos e atualização do arquivo JSON.
+5. Tratamento da conexão de um cliente, permitindo que ele vote, veja os resultados ou acesse opções de administração, dependendo de sua identificação e do estado da votação.
+6. Envio dos resultados da votação quando o tempo de votação expira ou a votação já encerrou.
+7. Configuração de um servidor que escuta conexões de clientes em uma porta específica e cria threads para lidar com cada cliente.
+
+Código do Cliente:
+O código do cliente é responsável por se conectar ao servidor de votação e permitir que os eleitores votem, vejam os resultados ou realizem ações de administração. Ele implementa as seguintes funcionalidades:
+
+1. Conexão a um servidor em um endereço e porta específicos.
+2. Identificação do eleitor pelo CPF.
+3. Exibição de opções para administradores ou candidatos disponíveis para eleitores.
+4. Votação em um candidato escolhido e confirmação do voto.
+5. Exibição dos resultados da votação quando a votação encerra.
+
+Modelo JSON para Votação:
+O modelo JSON para votação contém informações sobre os candidatos, incluindo o ID, nome e número de votos, bem como um registro de eleitores e seus votos associados.
+
+Modelo JSON para Administradores:
+O modelo JSON para administradores do sistema contém os CPFs dos administradores autorizados a realizar ações especiais no servidor.
+
+Este sistema de votação oferece uma estrutura completa para conduzir uma eleição, permitindo que eleitores votem, administradores adicionem ou removam candidatos, e exibindo os resultados após o término da votação.
+

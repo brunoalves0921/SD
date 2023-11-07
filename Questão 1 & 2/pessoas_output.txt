@@ -1,0 +1,2 @@
+Nome: Bruno, CPF: 7635912380, Idade: 20
+Nome: José, CPF: 12312354123, Idade: 12

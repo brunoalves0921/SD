@@ -1,0 +1,6 @@
+{
+    "admins": [
+      {"cpf": "admin"},
+      {"cpf": "admin2"}
+    ]
+  }
