@@ -100,7 +100,7 @@ A API não requer autenticação no momento.
 - **Parâmetros:**
   - `paciente_cpf` (string): CPF do paciente.
   - `medico_cpf` (string): CPF do médico.
-  - `data` (string): Data da consulta (formato: YYYY-MM-DD).
+  - `data` (string): Data da consulta (formato: DD-MM-YYYY).
 
 #### 3. Deletar Consulta
 
@@ -110,7 +110,7 @@ A API não requer autenticação no momento.
 - **Parâmetros:**
   - `paciente_cpf` (string): CPF do paciente.
   - `medico_cpf` (string): CPF do médico.
-  - `data` (string): Data da consulta (formato: YYYY-MM-DD).
+  - `data` (string): Data da consulta (formato: DD-MM-YYYY).
 
 ### Especialidades
 
@@ -123,3 +123,5 @@ A API não requer autenticação no momento.
 ## Considerações Finais
 
 Esta documentação fornece uma visão geral dos endpoints disponíveis na API. Certifique-se de fornecer os parâmetros corretos ao fazer solicitações para garantir o funcionamento adequado da API.
+
+Se preferir, utilize o programa "main.py" para consumir a API, fica mais fácil fazer a manipulação e seus testes.
