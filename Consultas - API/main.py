@@ -42,7 +42,8 @@ def menu():
             else:
                 print("Opção inválida. Tente novamente.")
         except requests.exceptions.ConnectionError:
-            print("Erro de conexão. Tente novamente.")
+            print()
+            print("ERROR: Não foi possível estabelecer uma conexão. Tente novamente.")
 
 def formatar_pacientes(data):
     print("\nPacientes:")
@@ -100,7 +101,18 @@ def adicionar_medico():
     nome = input("Digite o nome do médico: ")
     cpf = input("Digite o CPF do médico: ")
     if len(cpf.strip()) != 0 and len(nome.strip()) != 0:
-        especialidade = int(input("Digite o número da especialidade do médico: "))
+        #printe todas as especialidades disponíveis
+        print("Especialidades disponíveis:")
+        print()
+        print("0. Oftalmologista")
+        print("1. Patologista")
+        print("2. Clínico Geral")
+        print()
+        try:
+            especialidade = int(input("Digite o número da especialidade do médico: "))
+        except ValueError:
+            print("Valor inválido. Tente novamente.")
+            return
         data = {"nome": nome, "cpf": cpf, "especialidade": especialidade}
         response = requests.post(f"{BASE_URL}/medicos/", json=data)
         print(response.json())
