@@ -1,5 +1,4 @@
 import socket
-import json
 import pickle
 
 # Configuração do cliente
