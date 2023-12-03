@@ -135,7 +135,7 @@ def marcar_consulta():
     paciente_cpf = input("Digite o CPF do paciente: ")
     medico_cpf = input("Digite o CPF do médico: ")
     if len(paciente_cpf.strip()) != 0 and len(medico_cpf.strip()) != 0:
-        data = input("Digite a data da consulta (YYYY/MM/DD): ")
+        data = input("Digite a data da consulta (DD/MM/YYYY): ")
         data = {"paciente_cpf": paciente_cpf, "medico_cpf": medico_cpf, "data": data}
         response = requests.post(f"{BASE_URL}/consultas/", json=data)
         print(response.json())
